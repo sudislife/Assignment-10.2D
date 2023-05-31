@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/sit737-23t1-mishra-80a3f52/jokes-image', '.']
+    args: ['build', '-t', 'gcr.io/sit737-23t1-mishra-80a3f52/jokes-image', 'jokes/']
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/sit737-23t1-mishra-80a3f52/jokes-image']
