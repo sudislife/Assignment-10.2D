@@ -9,4 +9,8 @@ steps:
     args: ['container', 'clusters', 'get-credentials', 'cluster-1', '--region', 'australia-southeast1']
 
   - name: 'gcr.io/cloud-builders/kubectl'
+    env:
+      - 'CLOUDSDK_COMPUTE_REGION=australia-southeast1'
+      - 'CLOUDSDK_COMPUTE_ZONE=australia-southeast1'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-1'
     args: ['apply', '-f', 'deployment.yaml']
